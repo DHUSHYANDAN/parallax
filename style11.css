@@ -9,24 +9,29 @@
 
   body
       {min-height: 100vh;
+        overflow-x:hidden;
        
-     overflow-x: hidden;}
-  
-      header{position: absolute;
+}
+
+
+header{      position: absolute;
              top: 0;
              left: 0;
              width: 100%;
              padding: 30px 100px;
-            
              display: flex; 
              justify-content: space-between;
              align-items: center;
-             z-index: 100;}
-      .logo{font: size 2em; 
+             z-index: 100;
+            }
+
+.logo{      font-size: 2em; 
             color: white;
-            user-select:none ;}
-      .navigation a{position: relative;
-                 font-size: 1.1em;
+            user-select:none ;  /*the user can unable to select the text */
+        }
+      
+.navigation a{    position: relative;
+                  font-size: 1.1em;
                   color: white;
                   font-weight: 600;
                   text-decoration: none;
@@ -36,7 +41,9 @@
   
       .navigation a:hover,
       .navigation a.active
+     
       {
+        
           color: #333;
       }        
       .navigation a span {
@@ -49,22 +56,27 @@
           border-radius: 30px;
           z-index:  -1;
           transform: scale(0);
-          transition: .5s;
+          transition: .8s;
           opacity: 0;
       }
       .navigation a:hover span,
-      .navigation a.active span
+       .navigation a.active span
+      
       {
           transform: scale(1);
           opacity: 1;
+          
       }
+
+
+
       .parallax{ 
           position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100vh;
-          background: url(background.png)no-repeat;
+          background: url('background.png')no-repeat;
           background-size: cover;
           background-position: center;
           background-attachment: fixed;
@@ -72,29 +84,41 @@
   
       }
       #text{ position: absolute;
-       
+             z-index:  0.5;
              font-size: 5em;
              color: black;
              text-shadow: 2px 4px 5px white;
              }
-            .parallax img{
+    .parallax img{
                 position:absolute;
-                top: -100px;
+                top: 0;
                 left: 0;
                 width: 100%;
+                pointer-events:none;
         
             }
-      #gate-left{
+            
+            .parallax img#gate-left{
+                position:fixed;
                 transform: translateX(-282px);
                
             }
-         #gate-right{
+            .parallax img#gate-right{
+                position:fixed;
                 transform: translateX(305px);
                 
             }
                                        
          .sec {position: relative;
-          padding:15px ;
-          background: rgba(0, 0, 0, 0.838);
-         color: aliceblue;}  
-      .sec  h2{font-size: 3em;}    
+               padding:30px 100px ;
+              background: black;
+               color: aliceblue;}  
+      .sec  h2{font-size: 3em;
+               color:white;}    
+
+         .sec p{
+            font-size:1em;
+            color:white;
+            font-weight:300;
+            text-align:justify;
+         }      
