@@ -77,7 +77,7 @@ header{      position: absolute;
           justify-content: center;
           align-items: center;
           height: 100vh;
-          background: url('background.png')no-repeat;
+          background: url('assets/background.png')no-repeat;
           background-size: cover;
           background-position: center;
           background-attachment: fixed;
@@ -98,11 +98,7 @@ header{      position: absolute;
                 pointer-events:none;
         
             }
-            .parallax img#grass{
-               
-                z-index:20;
-               
-            }
+            
             
             .parallax img#gate-left{
                
@@ -114,9 +110,12 @@ header{      position: absolute;
                 transform: translateX(305px);
                 
             }
+
+            
                                        
          .sec {position: relative;
                padding:30px 100px ;
+               
               background: black;
                color: aliceblue;}  
       .sec  h2{font-size: 3em;
@@ -128,3 +127,20 @@ header{      position: absolute;
             font-weight:300;
             text-align:justify;
          }      
+
+
+    /* Define the initial opacity for the checkbox */
+.form-check-input {
+    opacity: 1;
+}
+
+/* Define the animation for fading out */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Apply the fadeOut animation to the checkbox */
+.fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+}

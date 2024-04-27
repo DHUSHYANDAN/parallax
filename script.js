@@ -1,15 +1,35 @@
-let text = document.getElementById('text');
-let treeLeft = document.getElementById('tree-left');
-let treeRight = document.getElementById('tree-right');
-let gateLeft = document.getElementById('gate-left');
-let gateRight = document.getElementById('gate-right');
+const title = document.querySelector('.title')
+const leaf11 = document.querySelector('.leaf1')
+const leaf22 = document.querySelector('.leaf2')
+const bush2 = document.querySelector('.bush2')
+const mount1 = document.querySelector('.mount1')
+const mount2 = document.querySelector('.mount2')
+
+document.addEventListener('scroll', function() {
+    let value = window.scrollY
+    // console.log(value)
+    title.style.marginTop = value * 1.1 + 'px'
+
+   
+    leaf11.style.marginLeft = -value + 'px'
+    leaf22.style.marginLeft = value + 'px'
+
+    bush2.style.marginBottom = -value + 'px'
+
+    mount1.style.marginBottom = -value * 1.1 + 'px'
+    mount2.style.marginBottom = -value * 1.2 + 'px'
+})
 
 
-window.addEventListener('scroll', () => {
-    let value = window.scrollY;
-    text.style.marginTop = value * 2.5 + 'px';
-    treeLeft.style.marginLeft = -value + 'px';
-    treeRight.style.marginLeft = value + 'px';
-    gateLeft.style.left = value * 0.5 + 'px';
-    gateRight.style.left = value * -0.5 + 'px';
+const checkbox = document.getElementById('flexSwitchCheckDefault');
+checkbox.addEventListener('click', function() {
+    // Add fade-out animation class to the checkbox
+    checkbox.classList.add('fade-out');
+    
+    // After a delay, switch location
+    setTimeout(() => {
+        window.location.href = 'index2.html';
+    }, 500); // 500ms delay matches the animation duration
 });
+
+
