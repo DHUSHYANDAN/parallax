@@ -12,7 +12,7 @@
         overflow-x:hidden;
        
 }
-
+    
 
 header{      position: absolute;
              top: 0;
@@ -99,12 +99,12 @@ header{      position: absolute;
             }
             
             .parallax img#gate-left{
-                position:fixed;
+               
                 transform: translateX(-282px);
                
             }
             .parallax img#gate-right{
-                position:fixed;
+              
                 transform: translateX(305px);
                 
             }
