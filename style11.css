@@ -12,7 +12,8 @@
         overflow-x:hidden;
        
 }
-    
+
+  
 
 header{      position: absolute;
              top: 0;
@@ -96,6 +97,11 @@ header{      position: absolute;
                 width: 100%;
                 pointer-events:none;
         
+            }
+            .parallax img#grass{
+               
+                z-index:20;
+               
             }
             
             .parallax img#gate-left{
