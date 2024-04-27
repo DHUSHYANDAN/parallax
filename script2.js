@@ -1,3 +1,5 @@
+
+
 let text = document.getElementById('text');
 let treeLeft = document.getElementById('tree-left');
 let treeRight = document.getElementById('tree-right');
@@ -22,6 +24,6 @@ checkbox.addEventListener('click', function() {
     // After a delay, switch location
     setTimeout(() => {
         window.location.href = 'index.html';
-    }, 500); // 500ms delay matches the animation duration
+    }, 500); 
 });
 

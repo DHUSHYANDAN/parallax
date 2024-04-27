@@ -1,3 +1,5 @@
+
+
 const title = document.querySelector('.title')
 const leaf11 = document.querySelector('.leaf1')
 const leaf22 = document.querySelector('.leaf2')
@@ -32,4 +34,20 @@ checkbox.addEventListener('click', function() {
     }, 500); // 500ms delay matches the animation duration
 });
 
+
+var modal = document.getElementById("myModal");
+var closeButton = document.getElementsByClassName("close")[0];
+
+// When the window finishes loading, display the modal
+window.onload = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on the close button, hide the modal and trigger fade-out animation
+closeButton.onclick = function() {
+    modal.classList.add('fade-out'); // Add 'fade-out' class to trigger animation
+    setTimeout(function() {
+        modal.style.display = "none"; // Hide the modal after the animation completes
+    }, 5000); 
+}
 
