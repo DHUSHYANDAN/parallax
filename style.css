@@ -57,7 +57,11 @@ header nav:hover > a:not(:hover) {
     bottom: 0;
     width: 100%;
     pointer-events: none;
+    
 }
+
+.mount1, .mount2{filter: drop-shadow(10px 7px 20px rgb(244, 233, 155));}
+
 
 .home .title {
     position: absolute;
