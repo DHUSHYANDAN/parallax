@@ -28,26 +28,24 @@ checkbox.addEventListener('click', function() {
     // Add fade-out animation class to the checkbox
     checkbox.classList.add('fade-out');
     
-    // After a delay, switch location
+    /
     setTimeout(() => {
         window.location.href = 'index2.html';
-    }, 500); // 500ms delay matches the animation duration
+    }, 500); 
 });
 
 
 var modal = document.getElementById("myModal");
 var closeButton = document.getElementsByClassName("close")[0];
 
-// When the window finishes loading, display the modal
-window.onload = function() {
-    modal.style.display = "block";
-}
 
-// When the user clicks on the close button, hide the modal and trigger fade-out animation
+
+
+
 closeButton.onclick = function() {
-    modal.classList.add('fade-out'); // Add 'fade-out' class to trigger animation
+    modal.classList.add('fade-out'); 
     setTimeout(function() {
-        modal.style.display = "none"; // Hide the modal after the animation completes
+        modal.style.display = "none"; 
     }, 5000); 
 }
 
